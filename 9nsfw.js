@@ -1,5 +1,7 @@
 (function() {
     const imagesUrl = 'http://img-9gag-fun.9cache.com/photo/';
+    const bigImagePostfix = '_700b.jpg';
+    const smallImagePostfix = '_460s.jpg';
 
     showNSFWPosts();
     setInterval(showNSFWPosts, 1000);
@@ -29,7 +31,7 @@
     }
 
     function getUrlPostfix() {
-        return window.location.href.indexOf('/gag/') !== -1? '_700b.jpg': '_460s.jpg';
+        return window.location.href.indexOf('/gag/') !== -1? bigImagePostfix: smallImagePostfix;
     }
 
     function getImageSrc(idImage) {
